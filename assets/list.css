@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+
+body {
+    background:url("../assets/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+
+img {
+    height: 35px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    cursor: pointer;
+}
+
+.container {
+    background-color: rgb(151, 151, 151);
+    width: 500px;
+    min-height: 200px; /* Altura mínima inicial */
+    height: min-content; /* Ajuste automático da altura */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#input-task {
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+#botaoDaTask {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #377899e0;
+    color: white;
+    font-size: 15px;
+    padding: 0px 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 550;
+}
+
+#botaoDaTask:active {
+    opacity: 0.7;
+    padding-top: 20px;
+}
+
+.lista {
+    width: 100%;
+    list-style: none;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.task {
+    background-color: #e1e2e2;
+    box-shadow: 2px 1px 4px -1px black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.task:hover img {
+    opacity: 0.8;
+}
+
+/* list.css */
+.hidden {
+    display: none;
+}
+
+.task.completed {
+    background-color: #e0f7e9; /* Fundo verde claro */
+    color: #333; /* Cor do texto para melhor contraste */
+}
